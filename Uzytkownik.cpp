@@ -15,17 +15,17 @@ void Uzytkownik::ustawHaslo(string noweHaslo)
     haslo = noweHaslo;
 }
 
-int Uzytkownik::pobierzId()
+int Uzytkownik::pobierzId() const
 {
     return id;
 }
 
-string Uzytkownik::pobierzLogin()
+string Uzytkownik::pobierzLogin() const
 {
     return login;
 }
 
-string Uzytkownik::pobierzHaslo()
+string Uzytkownik::pobierzHaslo() const
 {
     return haslo;
 }

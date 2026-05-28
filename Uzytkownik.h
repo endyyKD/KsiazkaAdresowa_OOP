@@ -16,7 +16,7 @@ public:
     void ustawLogin(string nowyLogin);
     void ustawHaslo(string noweHaslo);
 
-    int pobierzId();
-    string pobierzLogin();
-    string pobierzHaslo();
+    int pobierzId() const;
+    string pobierzLogin() const;
+    string pobierzHaslo() const;
 };

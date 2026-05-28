@@ -25,4 +25,5 @@ class KsiazkaAdresowa
 
 public:
     void rejestracjaUzytkownika(); // vector jest częścią klasy, więc funckja nie musi przyjmować vectora jako swojego parametru
+    void wypiszUzytkownikow();
 };

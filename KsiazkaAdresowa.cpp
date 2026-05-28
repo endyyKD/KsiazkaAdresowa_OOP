@@ -76,3 +76,13 @@ bool KsiazkaAdresowa::czyIstniejeLogin(string login)
     }
     return false;
 }
+
+void KsiazkaAdresowa::wypiszUzytkownikow()
+{
+    for (const Uzytkownik &user : uzytkownicy)
+    {
+        cout << "ID: " << user.pobierzId() << endl;
+        cout << "Login: " << user.pobierzLogin() << endl;
+        cout << "Haslo: " << user.pobierzHaslo() << endl;
+    }
+}
