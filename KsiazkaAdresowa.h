@@ -22,4 +22,5 @@ public:
     void dodajAdresata();
     void wyswietlIdOstatniego();
     void wyswietlWszystkichAdresatow();
+
 };

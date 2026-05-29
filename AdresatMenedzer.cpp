@@ -7,7 +7,11 @@ using namespace std;
 AdresatMenedzer::AdresatMenedzer(string nazwaPliku, const int &idUzytkownika)
     : idZalogowanegoUzytkownika(idUzytkownika), plikZAdresatami(nazwaPliku)
 {
-    idOstatniegoAdresata = 0;
+}
+
+void AdresatMenedzer::zaladujAdresatow()
+{
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }
 
 void AdresatMenedzer::dodajAdresata()
@@ -24,15 +28,13 @@ void AdresatMenedzer::dodajAdresata()
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
-
-    idOstatniegoAdresata++;
 }
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustawId(idOstatniegoAdresata + 1);
+    adresat.ustawId(plikZAdresatami.pobierzOstatnieIdZPliku() + 1);
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";
@@ -55,9 +57,9 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     return adresat;
 }
 
-void AdresatMenedzer::wyswietlIdOstatniego() // TODO do usuniecia potem
+void AdresatMenedzer::wyswietlIdOstatniego()
 {
-    cout << "ID ostatniego adresata: " << idOstatniegoAdresata << endl;
+    cout << "ID ostatniego adresata: " << plikZAdresatami.pobierzOstatnieIdZPliku() << endl;
 }
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()

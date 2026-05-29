@@ -19,6 +19,7 @@ void KsiazkaAdresowa::wypiszUzytkownikow()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenedzer.logowanieUzytkownika();
+    adresatMenedzer.zaladujAdresatow();
 }
 
 void KsiazkaAdresowa::pobierzIdZalogowanegoUzytkowika()
