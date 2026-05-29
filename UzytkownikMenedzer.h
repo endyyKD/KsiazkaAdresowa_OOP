@@ -15,10 +15,13 @@ class UzytkownikMenedzer
 
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
+    Uzytkownik podajDaneNowegoUzytkownika();
 
 public:
     UzytkownikMenedzer(string nazwaPliku);
-    Uzytkownik podajDaneNowegoUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszUzytkownikow();
+    void logowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkowika();
+    void wylogujUzytkownika();
 };

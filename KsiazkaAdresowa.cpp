@@ -13,3 +13,19 @@ void KsiazkaAdresowa::wypiszUzytkownikow()
 {
     uzytkownikMenedzer.wypiszUzytkownikow();
 }
+
+void KsiazkaAdresowa::logowanieUzytkownika()
+{
+    uzytkownikMenedzer.logowanieUzytkownika();
+}
+
+void KsiazkaAdresowa::pobierzIdZalogowanegoUzytkowika()
+{
+    cout << endl
+         << "ID zalogowanego uzytkownika: " << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkowika() << endl;
+}
+
+void KsiazkaAdresowa::wylogujUzytkownika()
+{
+    uzytkownikMenedzer.wylogujUzytkownika();
+}
