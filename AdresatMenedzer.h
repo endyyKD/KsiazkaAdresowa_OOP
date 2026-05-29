@@ -10,8 +10,17 @@ using namespace std;
 class AdresatMenedzer
 {
     const int &idZalogowanegoUzytkownika;
+    vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+    int idOstatniegoAdresata;
+    int idUsunietegoAdresata;
+
+    Adresat podajDaneNowegoAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
 
 public:
     AdresatMenedzer(string nazwaPliku, const int &idUzytkownika);
+    void dodajAdresata();
+    void wyswietlIdOstatniego();
+    void wyswietlWszystkichAdresatow();
 };

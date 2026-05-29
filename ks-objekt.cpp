@@ -11,10 +11,11 @@ int main()
     ksiazkaAdresowa.pobierzIdZalogowanegoUzytkowika();
     ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.pobierzIdZalogowanegoUzytkowika();
-    ksiazkaAdresowa.zmianaHaslaUzytkownika();
-    ksiazkaAdresowa.wypiszUzytkownikow();
-    ksiazkaAdresowa.wylogujUzytkownika();
-    ksiazkaAdresowa.pobierzIdZalogowanegoUzytkowika();
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.wyswietlIdOstatniego();
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.wyswietlIdOstatniego();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     return 0;
 }
