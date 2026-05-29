@@ -17,7 +17,7 @@ class UzytkownikMenedzer
     bool czyIstniejeLogin(string login);
 
 public:
-    UzytkownikMenedzer();
+    UzytkownikMenedzer(string nazwaPliku);
     Uzytkownik podajDaneNowegoUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszUzytkownikow();

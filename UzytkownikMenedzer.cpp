@@ -5,7 +5,7 @@
 
 using namespace std;
 
-UzytkownikMenedzer::UzytkownikMenedzer()
+UzytkownikMenedzer::UzytkownikMenedzer(string nazwaPliku) : plikZUzytkownikami(nazwaPliku)
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
