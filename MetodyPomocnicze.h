@@ -13,4 +13,5 @@ public:
     static string wczytajLinie();
     static string konwerjsaIntNaString(int liczba);
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    static int konwersjaStringNaInt(string liczba);
 };
