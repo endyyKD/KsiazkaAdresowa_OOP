@@ -119,7 +119,7 @@ void UzytkownikMenedzer::logowanieUzytkownika()
     MetodyPomocnicze::pauza();
 }
 
-int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkowika()
+const int& UzytkownikMenedzer::pobierzIdZalogowanegoUzytkowika()
 {
     return idZalogowanegoUzytkownika;
 }
