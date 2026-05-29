@@ -9,6 +9,7 @@ class KsiazkaAdresowa
     UzytkownikMenedzer uzytkownikMenedzer;
 
 public:
+    KsiazkaAdresowa(string nazwaPliku);
     void rejestracjaUzytkownika();
     void wypiszUzytkownikow();
 };
