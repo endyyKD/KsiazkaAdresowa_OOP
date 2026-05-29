@@ -11,6 +11,8 @@ int main()
     ksiazkaAdresowa.pobierzIdZalogowanegoUzytkowika();
     ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.pobierzIdZalogowanegoUzytkowika();
+    ksiazkaAdresowa.zmianaHaslaUzytkownika();
+    ksiazkaAdresowa.wypiszUzytkownikow();
     ksiazkaAdresowa.wylogujUzytkownika();
     ksiazkaAdresowa.pobierzIdZalogowanegoUzytkowika();
 
