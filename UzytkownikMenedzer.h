@@ -22,7 +22,7 @@ public:
     void rejestracjaUzytkownika();
     void wypiszUzytkownikow();
     void logowanieUzytkownika();
-    int pobierzIdZalogowanegoUzytkowika();
+    const int& pobierzIdZalogowanegoUzytkowika();
     void wylogujUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
 };

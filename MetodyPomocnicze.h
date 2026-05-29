@@ -12,4 +12,7 @@ public:
     static void clearScreen();
     static string wczytajLinie();
     static string konwerjsaIntNaString(int liczba);
+    static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    static int konwersjaStringNaInt(string liczba);
+    static string pobierzLiczbe(string tekst, int pozycjaZnaku);
 };
