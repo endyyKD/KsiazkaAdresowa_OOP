@@ -6,6 +6,7 @@ using namespace std;
 
 PlikZAdresatami::PlikZAdresatami(string nazwaPliku) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPliku)
 {
+    ostatnieIdZPlikuZAdresatami = 0;
 }
 
 void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
@@ -33,6 +34,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
     plikTekstowy.close();
+    ostatnieIdZPlikuZAdresatami = adresat.pobierzId();
     MetodyPomocnicze::pauza();
 }
 
@@ -66,9 +68,7 @@ vector<Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(i
 {
     Adresat adresat;
     vector<Adresat> adresaci;
-    int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
-    string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
     plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
 
@@ -76,40 +76,27 @@ vector<Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(i
     {
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
         {
+            int id = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami);
+            if (id > ostatnieIdZPlikuZAdresatami)
+                ostatnieIdZPlikuZAdresatami = id;
+
             if (idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
             {
                 adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
                 adresaci.push_back(adresat);
             }
         }
-        daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
     }
     else
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
 
     plikTekstowy.close();
-
     return adresaci;
 }
 
 int PlikZAdresatami::pobierzOstatnieIdZPliku()
 {
-    int ostatnieId = 0;
-    string linia = "";
-    fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
-
-    if (plikTekstowy.good() == true)
-    {
-        while (getline(plikTekstowy, linia))
-        {
-            int id = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(linia);
-            if (id > ostatnieId)
-                ostatnieId = id;
-        }
-    }
-    plikTekstowy.close();
-    return ostatnieId;
+    return ostatnieIdZPlikuZAdresatami;
 }
 
 int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)

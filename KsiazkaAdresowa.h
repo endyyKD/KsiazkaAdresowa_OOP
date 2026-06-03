@@ -20,7 +20,5 @@ public:
     void zmianaHaslaUzytkownika();
 
     void dodajAdresata();
-    void wyswietlIdOstatniego();
     void wyswietlWszystkichAdresatow();
-
 };

@@ -21,6 +21,5 @@ public:
     AdresatMenedzer(string nazwaPliku, const int &idUzytkownika);
     void zaladujAdresatow();
     void dodajAdresata();
-    void wyswietlIdOstatniego();
     void wyswietlWszystkichAdresatow();
 };

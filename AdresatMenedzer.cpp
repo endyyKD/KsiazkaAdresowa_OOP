@@ -57,11 +57,6 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     return adresat;
 }
 
-void AdresatMenedzer::wyswietlIdOstatniego()
-{
-    cout << "ID ostatniego adresata: " << plikZAdresatami.pobierzOstatnieIdZPliku() << endl;
-}
-
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
     MetodyPomocnicze::clearScreen();
