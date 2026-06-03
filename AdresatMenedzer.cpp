@@ -5,13 +5,13 @@
 using namespace std;
 
 AdresatMenedzer::AdresatMenedzer(string nazwaPliku, const int &idUzytkownika)
-    : idZalogowanegoUzytkownika(idUzytkownika), plikZAdresatami(nazwaPliku)
+    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idUzytkownika), plikZAdresatami(nazwaPliku)
 {
 }
 
 void AdresatMenedzer::zaladujAdresatow()
 {
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 }
 
 void AdresatMenedzer::dodajAdresata()
@@ -35,7 +35,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     Adresat adresat;
 
     adresat.ustawId(plikZAdresatami.pobierzOstatnieIdZPliku() + 1);
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());

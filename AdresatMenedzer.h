@@ -9,7 +9,7 @@ using namespace std;
 
 class AdresatMenedzer
 {
-    const int &idZalogowanegoUzytkownika;
+    const int &ID_ZALOGOWANEGO_UZYTKOWNIKA;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
     int idUsunietegoAdresata;
