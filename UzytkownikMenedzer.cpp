@@ -124,6 +124,11 @@ const int& UzytkownikMenedzer::pobierzIdZalogowanegoUzytkowika()
     return idZalogowanegoUzytkownika;
 }
 
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany()
+{
+    return idZalogowanegoUzytkownika != 0;
+}
+
 void UzytkownikMenedzer::wylogujUzytkownika()
 {
     idZalogowanegoUzytkownika = 0;
