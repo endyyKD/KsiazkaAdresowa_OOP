@@ -1,5 +1,16 @@
 #include "Adresat.h"
 
+Adresat::Adresat()
+{
+    id = 0;
+    idUzytkownika = 0;
+    imie = "";
+    nazwisko = "";
+    numerTelefonu = "";
+    email = "";
+    adres = "";
+}
+
 void Adresat::ustawId(int noweId) { id = noweId; }
 void Adresat::ustawIdUzytkownika(int noweIdUzytkownika) { idUzytkownika = noweIdUzytkownika; }
 void Adresat::ustawImie(string noweImie) { imie = noweImie; }

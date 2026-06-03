@@ -17,6 +17,7 @@ public:
     void rejestracjaUzytkownika();
     void wypiszUzytkownikow();
     void logowanieUzytkownika();
+    bool czyUzytkownikJestZalogowany();
     void pobierzIdZalogowanegoUzytkowika();
     void wylogujUzytkownika();
     void zmianaHaslaUzytkownika();

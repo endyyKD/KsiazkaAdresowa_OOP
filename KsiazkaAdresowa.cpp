@@ -35,6 +35,11 @@ void KsiazkaAdresowa::pobierzIdZalogowanegoUzytkowika()
          << "ID zalogowanego uzytkownika: " << uzytkownikMenedzer.pobierzIdZalogowanegoUzytkowika() << endl;
 }
 
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
+{
+    return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+}
+
 void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMenedzer.wylogujUzytkownika();
