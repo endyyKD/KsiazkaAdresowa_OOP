@@ -4,9 +4,10 @@
 
 using namespace std;
 
-AdresatMenedzer::AdresatMenedzer(string nazwaPliku, const int &idUzytkownika)
+AdresatMenedzer::AdresatMenedzer(string nazwaPliku, int idUzytkownika)
     : ID_ZALOGOWANEGO_UZYTKOWNIKA(idUzytkownika), plikZAdresatami(nazwaPliku)
 {
+    zaladujAdresatow();
 }
 
 void AdresatMenedzer::zaladujAdresatow()

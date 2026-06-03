@@ -23,6 +23,7 @@ public:
     void wypiszUzytkownikow();
     void logowanieUzytkownika();
     const int& pobierzIdZalogowanegoUzytkowika();
+    bool czyUzytkownikJestZalogowany();
     void wylogujUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
 };
