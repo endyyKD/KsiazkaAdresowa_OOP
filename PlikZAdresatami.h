@@ -1,5 +1,6 @@
 #pragma once
 
+#include "PlikTekstowy.h"
 #include "Adresat.h"
 #include <string>
 #include <fstream>
@@ -8,13 +9,13 @@
 using namespace std;
 
 class PlikZAdresatami
+    : public PlikTekstowy
+
 {
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
     int ostatnieIdZPlikuZAdresatami;
     const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
 
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-    bool czyPlikJestPusty();
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
