@@ -73,6 +73,11 @@ void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
     adresatMenedzer->wyszukajAdresatowPoNazwisku();
 }
 
+void KsiazkaAdresowa::edytujAdresata()
+{
+    adresatMenedzer->edytujAdresata();
+}
+
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     char wybor;

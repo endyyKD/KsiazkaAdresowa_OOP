@@ -46,19 +46,9 @@ int main()
             case '2':
                 ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
-                // cout << endl
-                //      << "Funkcja wyszukiwania po imieniu jest jeszcze niedostepna." << endl
-                //      << endl;
-                // MetodyPomocnicze::pauza();
-                // break;
             case '3':
                 ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
-                // cout << endl
-                //      << "Funkcja wyszukiwania po nazwisku jest jeszcze niedostepna." << endl
-                //      << endl;
-                // MetodyPomocnicze::pauza();
-                // break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
@@ -69,10 +59,11 @@ int main()
                 MetodyPomocnicze::pauza();
                 break;
             case '6':
-                cout << endl
-                     << "Funkcja edycji adresata jest jeszcze niedostepna." << endl
-                     << endl;
-                MetodyPomocnicze::pauza();
+                ksiazkaAdresowa.edytujAdresata();
+                // cout << endl
+                //      << "Funkcja edycji adresata jest jeszcze niedostepna." << endl
+                //      << endl;
+                // MetodyPomocnicze::pauza();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaUzytkownika();
