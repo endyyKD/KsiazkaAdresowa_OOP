@@ -24,4 +24,7 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
 };
