@@ -44,17 +44,21 @@ int main()
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2':
-                cout << endl
-                     << "Funkcja wyszukiwania po imieniu jest jeszcze niedostepna." << endl
-                     << endl;
-                MetodyPomocnicze::pauza();
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
+                // cout << endl
+                //      << "Funkcja wyszukiwania po imieniu jest jeszcze niedostepna." << endl
+                //      << endl;
+                // MetodyPomocnicze::pauza();
+                // break;
             case '3':
-                cout << endl
-                     << "Funkcja wyszukiwania po nazwisku jest jeszcze niedostepna." << endl
-                     << endl;
-                MetodyPomocnicze::pauza();
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
                 break;
+                // cout << endl
+                //      << "Funkcja wyszukiwania po nazwisku jest jeszcze niedostepna." << endl
+                //      << endl;
+                // MetodyPomocnicze::pauza();
+                // break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;

@@ -8,7 +8,7 @@ using namespace std;
 class KsiazkaAdresowa
 {
     UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer *adresatMenedzer;
+    AdresatMenedzer *adresatMenedzer; // wskaznik, bo jest tworzony dopiero po zalogowaniu uzytkownika
     const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:
@@ -24,6 +24,8 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
