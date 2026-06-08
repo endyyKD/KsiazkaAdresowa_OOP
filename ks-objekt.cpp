@@ -53,17 +53,10 @@ int main()
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             case '5':
-                cout << endl
-                     << "Funkcja usuwania adresata jest jeszcze niedostepna." << endl
-                     << endl;
-                MetodyPomocnicze::pauza();
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
                 ksiazkaAdresowa.edytujAdresata();
-                // cout << endl
-                //      << "Funkcja edycji adresata jest jeszcze niedostepna." << endl
-                //      << endl;
-                // MetodyPomocnicze::pauza();
                 break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaUzytkownika();

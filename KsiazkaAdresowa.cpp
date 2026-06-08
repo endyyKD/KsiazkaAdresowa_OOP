@@ -78,6 +78,11 @@ void KsiazkaAdresowa::edytujAdresata()
     adresatMenedzer->edytujAdresata();
 }
 
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer->usunAdresata();
+}
+
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     char wybor;
